@@ -25,7 +25,7 @@ public class IkanView {
         boolean valid = false;
 
         do {
-            System.out.println("\n=== SISTEM INFORMASI PENGELOLAAN PERIKANAN ===");
+            System.out.println("\n=== SISTEM MANAJEMEN PENGELOLAAN PERIKANAN ===");
             System.out.println("1. Tambah Data");
             System.out.println("2. Tampilkan Data");
             System.out.println("3. Ubah Data");
