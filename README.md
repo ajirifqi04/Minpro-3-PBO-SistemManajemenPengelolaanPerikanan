@@ -1,4 +1,4 @@
-# Minpro 2 PBO - Sistem Manajemen Pengelolaan Perikanan
+# Minpro 3 PBO - Sistem Manajemen Pengelolaan Perikanan
 
 Nama : Aji Rifqi Suryana
 
@@ -109,8 +109,7 @@ Jika ID ditemukan, data ikan akan dihapus. Data lokasi penangkapan dan hasil pen
 
 Setelah proses selesai, sistem menampilkan pesan bahwa data ikan berhasil dihapus.
 
-
-
+<img width="491" height="243" alt="image" src="https://github.com/user-attachments/assets/ebe75312-0c00-412a-a174-40725dc9262e" />
 
 ---
 
@@ -118,21 +117,7 @@ Setelah proses selesai, sistem menampilkan pesan bahwa data ikan berhasil dihapu
 
 Pada menu keluar, pengguna memilih pilihan `5`. Sistem akan menampilkan pesan bahwa program selesai dan kemudian menghentikan perulangan menu.
 
-**[SCREENSHOT 14 - Tampilan Saat Memilih Menu Keluar]**
-
----
-
-### Error Handling pada Program
-
-Program memiliki validasi input untuk mencegah data yang tidak sesuai. Validasi dilakukan pada input menu, input teks, input jenis ikan, input jenis perairan, jumlah stok, dan kedalaman habitat.
-
-Pada input teks, sistem akan menolak input kosong. Pada input pilihan, sistem akan menolak pilihan yang tidak sesuai dengan pilihan yang telah ditentukan.
-
-Pada input angka, sistem menggunakan pengecekan agar input harus berupa angka. Jika pengguna memasukkan karakter atau teks, sistem akan menampilkan pesan kesalahan dan meminta input kembali. Jumlah stok dan kedalaman habitat juga tidak boleh bernilai negatif.
-
-Pada proses ubah dan hapus data, sistem melakukan pencarian berdasarkan ID ikan. Jika ID tidak ditemukan, sistem akan menampilkan pesan bahwa data ikan tidak ditemukan.
-
-**[SCREENSHOT 15 - Kumpulan Contoh Error Handling Program]**
+<img width="791" height="354" alt="image" src="https://github.com/user-attachments/assets/b5082e15-ac36-4c41-ac4a-6e6cfdaac1b2" />
 
 ---
 
@@ -144,30 +129,19 @@ Konsep *encapsulation* diterapkan dengan menggunakan access modifier `private` p
 
 Contohnya pada class `Ikan`:
 
-```java
-private int idIkan;
-private String namaIkan;
-private String jenisIkan;
-private int jumlahStok;
-```
+<img width="317" height="112" alt="image" src="https://github.com/user-attachments/assets/83ec0d85-ee20-4f38-b2ac-42dcec1600c7" />
 
 Akses terhadap atribut dilakukan menggunakan *getter* dan perubahan data dilakukan menggunakan *setter*. Setter juga memiliki validasi, seperti pada `setJumlahStok()` yang memastikan jumlah stok tidak bernilai negatif.
 
-**[SCREENSHOT 16 - Atribut Private, Getter, dan Setter pada Ikan.java]**
+<img width="389" height="245" alt="image" src="https://github.com/user-attachments/assets/0ffdce64-42ad-4ecb-9df7-41317ef9e26a" />
 
 ### Inheritance
 
 Konsep *inheritance* diterapkan dengan menjadikan `Ikan` sebagai superclass dan `IkanLaut` serta `IkanAirTawar` sebagai subclass.
 
-```text
-Ikan
-├── IkanLaut
-└── IkanAirTawar
-```
+<img width="203" height="85" alt="image" src="https://github.com/user-attachments/assets/14acb217-c031-4906-b25d-50f287442ab6" />
 
 Class `IkanLaut` dan `IkanAirTawar` mewarisi atribut dan method dari class `Ikan`. Selain itu, masing-masing subclass memiliki atribut tambahan sesuai dengan jenisnya. `IkanLaut` memiliki `kedalamanHabitat`, sedangkan `IkanAirTawar` memiliki informasi perairan.
-
-**[SCREENSHOT 17 - Ikan.java, IkanLaut.java, dan IkanAirTawar.java]**
 
 ---
 
@@ -179,76 +153,42 @@ Konsep *polymorphism* diterapkan melalui *overriding* dan *overloading*.
 
 *Overriding* diterapkan pada method `tampilkanDetail()` yang terdapat pada class `Ikan` dan diimplementasikan kembali pada class `IkanLaut` dan `IkanAirTawar` menggunakan `@Override`.
 
-```java
-@Override
-public void tampilkanDetail() {
-    // menampilkan detail data
-}
-```
+<img width="851" height="236" alt="image" src="https://github.com/user-attachments/assets/500cc693-b113-4b4e-ba5e-c9fe8fde52d9" />
 
-**[SCREENSHOT 18 - Method Overriding pada IkanLaut atau IkanAirTawar]**
+<img width="988" height="220" alt="image" src="https://github.com/user-attachments/assets/d280f2b2-f9aa-40a9-b424-fd6bd97bbbe1" />
 
 *Overloading* diterapkan pada class `Ikan` melalui method `tampilkanDetail()` yang memiliki parameter berbeda.
 
-```java
-public abstract void tampilkanDetail();
-
-public void tampilkanDetail(String judul) {
-    System.out.println("\n=== " + judul + " ===");
-    tampilkanDetail();
-}
-```
-
-**[SCREENSHOT 19 - Method Overloading pada Ikan.java]**
+<img width="613" height="111" alt="image" src="https://github.com/user-attachments/assets/64decc36-50a8-4328-878a-323f971c8150" />
 
 Polymorphism juga diterapkan pada `ArrayList<Ikan>` yang dapat menyimpan objek dari subclass seperti `IkanLaut`.
-
-```java
-private final ArrayList<Ikan> daftarIkan = new ArrayList<>();
-```
-
-**[SCREENSHOT 20 - ArrayList<Ikan> dan Objek IkanLaut]**
 
 ### Abstraction
 
 Konsep *abstraction* diterapkan dengan menjadikan class `Ikan` sebagai *abstract class*.
 
-```java
-public abstract class Ikan implements DataPerikanan
-```
+<img width="623" height="29" alt="image" src="https://github.com/user-attachments/assets/bcec221e-b5dd-4904-ab68-c651bdbd881c" />
 
 Class `Ikan` memiliki *abstract method* `tampilkanDetail()`:
 
-```java
-public abstract void tampilkanDetail();
-```
+<img width="481" height="36" alt="image" src="https://github.com/user-attachments/assets/4c14a795-9deb-4639-9213-15266bb1d62d" />
 
 Method tersebut kemudian diimplementasikan oleh subclass `IkanLaut` dan `IkanAirTawar`. Dengan demikian, class `Ikan` menjadi dasar bagi subclass tanpa membuat objek `Ikan` secara langsung.
 
-**[SCREENSHOT 21 - Abstract Class dan Abstract Method pada Ikan.java]**
-
 ---
 
-## 6. Letak Penerapan Nilai Tambah
+## 6. Penerapan Nilai Tambah Interface
 
 Nilai tambah yang diterapkan pada program adalah penggunaan *interface*.
 
 Interface `DataPerikanan` terdapat pada package `model`:
 
-```java
-public interface DataPerikanan {
-    void tampilkanData();
-}
-```
+<img width="404" height="82" alt="image" src="https://github.com/user-attachments/assets/c6f8c84f-e428-488e-aa26-1b0754963d29" />
 
 Interface tersebut diimplementasikan oleh class yang membutuhkan method `tampilkanData()`, seperti `Ikan`, `LokasiPenangkapan`, dan `HasilPenangkapan`.
 
 Contoh penerapannya pada class `Ikan`:
 
-```java
-public abstract class Ikan implements DataPerikanan
-```
+<img width="621" height="41" alt="image" src="https://github.com/user-attachments/assets/399dd017-8aa1-4b3d-8f6c-87488d40817c" />
 
 Penggunaan *interface* memungkinkan beberapa class memiliki aturan method yang sama, yaitu `tampilkanData()`.
-
-**[SCREENSHOT 22 - DataPerikanan.java dan Penerapan implements DataPerikanan]**
