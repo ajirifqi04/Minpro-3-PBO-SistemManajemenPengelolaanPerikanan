@@ -1,4 +1,4 @@
-<img width="417" height="785" alt="image" src="https://github.com/user-attachments/assets/c7159454-a85e-4f1c-b579-038c9ab6a701" /># Minpro 3 PBO - Sistem Manajemen Pengelolaan Perikanan
+# Minpro 3 PBO - Sistem Manajemen Pengelolaan Perikanan
 
 Nama : Aji Rifqi Suryana
 
