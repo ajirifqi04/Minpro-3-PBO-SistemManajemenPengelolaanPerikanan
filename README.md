@@ -1,4 +1,4 @@
-# Minpro 3 PBO - Sistem Manajemen Pengelolaan Perikanan
+<img width="417" height="785" alt="image" src="https://github.com/user-attachments/assets/c7159454-a85e-4f1c-b579-038c9ab6a701" /># Minpro 3 PBO - Sistem Manajemen Pengelolaan Perikanan
 
 Nama : Aji Rifqi Suryana
 
@@ -41,7 +41,7 @@ Package `controller` berisi `IkanController` yang digunakan untuk mengatur jalan
 
 Package `main` berisi `Main` yang digunakan sebagai titik awal program. Class `Main` memanggil method `start()` pada `IkanController`.
 
-<img width="373" height="380" alt="image" src="https://github.com/user-attachments/assets/50b371b0-32b9-4176-b160-6d395cf93909" />
+<img width="397" height="408" alt="image" src="https://github.com/user-attachments/assets/fecc3326-8833-4ecc-984e-52eb16f532c5" />
 
 ---
 
@@ -49,7 +49,7 @@ Package `main` berisi `Main` yang digunakan sebagai titik awal program. Class `M
 
 Program dimulai dari class `Main` yang memanggil method `start()` pada `IkanController`. Setelah program dijalankan, sistem akan menampilkan menu utama.
 
-<img width="462" height="156" alt="image" src="https://github.com/user-attachments/assets/98b7031b-68e9-41e2-b90f-55acd564c2b7" />
+<img width="497" height="175" alt="image" src="https://github.com/user-attachments/assets/4cfc0dc0-918a-4c25-82a1-d4c61994c7c7" />
 
 ### Menu 1 - Tambah Data
 
@@ -67,7 +67,7 @@ Jika memilih `Air Tawar`, pengguna diminta memasukkan nama perairan. Input terse
 
 Setelah seluruh data berhasil dimasukkan, sistem secara otomatis membuat ID ikan, ID lokasi, dan ID hasil penangkapan. Data kemudian disimpan ke dalam `ArrayList`.
 
-<img width="469" height="821" alt="image" src="https://github.com/user-attachments/assets/59d7f6f8-9366-4c74-9062-87517b4d3888" />
+<img width="417" height="785" alt="image" src="https://github.com/user-attachments/assets/e6d4f7cf-ab1f-48ee-b240-6cbb1890df8a" />
 
 ---
 
@@ -79,7 +79,7 @@ Data yang ditampilkan terdiri dari data ikan, data lokasi penangkapan, dan data 
 
 Jika belum terdapat data pada suatu bagian, sistem akan menampilkan pesan bahwa data belum tersedia.
 
-<img width="389" height="830" alt="image" src="https://github.com/user-attachments/assets/f224554d-937a-4880-91e5-2ec4f12d92c0" />
+<img width="346" height="755" alt="image" src="https://github.com/user-attachments/assets/139e25ff-8894-4d5b-817d-7e0a63d30f42" />
 
 ---
 
@@ -95,7 +95,7 @@ Setiap input tetap dilakukan melalui validasi. Nama ikan tidak boleh kosong, jen
 
 Setelah seluruh data berhasil dimasukkan, data ikan akan diperbarui.
 
-<img width="463" height="338" alt="image" src="https://github.com/user-attachments/assets/c2bbcd7f-7133-43f5-9c8e-f03162748aba" />
+<img width="410" height="280" alt="image" src="https://github.com/user-attachments/assets/bb5e683e-8410-4bb4-8430-99acdde6e508" />
 
 ---
 
